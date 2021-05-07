@@ -147,7 +147,7 @@ def convert_count_sex():
         else:
             male += 1
     print("Liczba kobiet: ", female)
-    print("Liczba mężczyzn", male)
+    print("Liczba mężczyzn: ", male)
 
 
 def remove_empty_lines():

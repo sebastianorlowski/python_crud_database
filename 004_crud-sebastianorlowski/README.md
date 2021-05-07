@@ -1,39 +1,26 @@
-# Zadanie nr 4 - CRUD
+Baza danych crud, zadanie w ramach laboratorium z języka programowania Python.
 
-| Termin oddania | Punkty     |
-|----------------|:-----------|
-|    27.04.2021 23:00 |   10        |
+Struktura bazy danych:  id;imię;nazwisko;pesel.
 
---- 
-Przekroczenie terminu o **n** zajęć wiąże się z karą:
-- punkty uzyskania za realizację zadania są dzielone przez **2<sup>n</sup>**.
+Po włączeniu aplikacji baza danych jest pusta.
 
---- 
-Zadanie polega na stworzeniu modułu, który dostarczy nam funkcjanolność bazy danych z zakresu CRUD (create, read, update, delete). Struktura bazy danych:
-id;imię;nazwisko;pesel.
+Użytkownik ma możliwość:
+    
+    1. Wczytać rekordy z pliku (przykładowa baza danych 
+    znajduje się w pliku "data.txt".
+    
+    2. Wpisanie wartości ręcznie (uwzględniana jest unikatowowść id)
 
-Domyślnie po włączneniu skryptu baza jest pusta.
-## CREATE [3 pkt]
-Użytkownik ma dwie możliwość wprowadzenia nowych rekorów do bazy.
-1. Wczytanie z pliku tekstowego (przykładowy plik został dołączony do repozytorium - data.txt).
-2. Wpisanie odpowienich wartości w konsoli.
+    3. Odczytanie zawartości bazy danych (wygląd PostgreSQL).
 
-Przed dodaniem rekordu do bazy należy odpowiednio sprawdzić unikatowość id.
+    4. Edycji rekordu poprzez podanie odpowiedniego id.
 
-## READ [1 pkt]
-Użytkownik powinien mieć możliwość odczytania całej zawartośći bazy danych w czytelny sposób.
+    5. Usunięcie rekordu przez podanie id (jeżeli id nie istnieje
+    to wtedy jest wyświetlany komunikat).
 
-## UPDATE [2 pkt]
-Użytkownik proszony jest o podanie ID dla którego chce dokonać zmiany, a następnie o podanie nowych wartości. Jeżli podane ID nie występuje w bazie, powinien pojawić się odpowiedni komunikat.
+    6. Obliczenie średniego wieku na podstawie numeru PESEL.
 
-## DELETE [2 pkt]
-Usuwanie rekordu na podstawie podanego przez użytkownika ID. Jeżli podane ID nie występuje w bazie, powinien pojawić się odpowiedni komunikat.
+    7. Ilość kobiet oraz mężczyzn na podstawie numeru PESEL.
 
-## DODATKI [2 pkt]
-1. Funkcja licząca średni wiek osób w bazie danych na podstawie numeru pesel.
-2. Funkcja zwracająca liczbę kobiet i mężczyzn w bazie danych na podstawie numeru pesel.
+* ID jest kluczem podstawowym i unikatowym.
 
-## Uwagi
-1. Zakładamy, że id jest kluczem podstawowym i unikatowym.
-2. Opis operacji na plikach [Python File I/O](https://www.programiz.com/python-programming/file-operation).
-3. Wszystkie funkcje powinny być napisane w storzownym module. Program główny powinien jedynie z nich odpowiednio korzystać.
